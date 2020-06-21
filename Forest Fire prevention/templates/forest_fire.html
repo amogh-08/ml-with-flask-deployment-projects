@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Untitled Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+*                   { padding:0px; margin:0px; outline:none; border:none;}
+.container-fluid    { background:url(C:\Users\Guest user\Forest Fire prevention\templates/forestfire.jpg) top center no-repeat; min-height:700px; background-size:cover; background-color:lightblue; background-blend-mode: multiply;}
+.View          { height:60px; background-color:white; opacity:0.7; position:fixed; width:100%; }
+.mid a            {float: right;
+    list-style-type: none;     font-size: 25px;
+    margin-top: 12px; color:#333;}
+.mid                { width:90%; margin:auto; height: 100px; }
+.mid1                { width:80%; margin:auto; height: 100px; }
+.safety h2          { color:green; font-size:30px; font-weight:bolder; text-align:center}
+.maintext h6                { color:black; text-align:center}
+.second             { height:200px; background-color:red;}
+.sidebar {
+  height:100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 12px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-top:20px;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidebar .closebtn {
+ 	
+	
+	
+}
+
+.openbtn {
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  background-color:white;
+  
+}
+.openbtn:hover {
+	
+  
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 5px;
+  margin-left:20px;
+  float:left
+   
+}
+.closebtn:hover     { -ms-transform: rotate(360deg);
+  transform: rotate(360deg); transition-duration:1.5s}
+ .fullbg        {   min-height:800px; background-size:cover;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;}
+  .middle        { height:50px; }
+   .middle1        { height:50px; text-align:center;}
+  #first_name         { opacity:0.5; height:25px; font-size:15px; border:1px solid #333; border-radius:8px; text-align:center}
+  #last_name            { opacity:0.5; height:25px; font-size:15px; border:1px solid #333; border-radius:8px; text-align:center}
+  #_name              { opacity:0.5; height:25px; font-size:15px; border:1px solid #333; border-radius:8px; text-align:center} 
+  #btnpro              { opacity:0.5; height:30px;  background-color:green; font-size:12px; border:1px solid #333; border-radius:20px; text-align:center; color:white; margin-top:10px;} 
+  #gapper           { display:inline-block;}
+  #gap1                { margin-top:10px;}
+  #gap2             { margin-top:10px;  height:30px;  }
+  #gap                { margin-top:10px; display: inline-block}
+  .lastfoot            { text-align:center}
+  #footer1          { text-align:center; display:inline-block; width:20%;}
+
+
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+ <div class="View"> 
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Home</a>
+  <a href="#">View</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact</a>
+</div>
+  <div class="mid">
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+    </div>
+    <a id="" href="#" class="brand-logo">Logo</a>
+   </div>
+   </div>
+    
+   <div class="mid1">
+   <div class="middle1">
+      </div>
+      <div class="middle1">
+      </div>
+      
+   <div class="safety">
+     <h2>Forest Fire Prevention</h2>
+     <div class="row center maintext">
+        <h6 class="header col s12 light">Predict the probability of Forest-Fire Occurence
+        </h6>
+      </div>
+      <div class="middle">
+      </div>
+      <div class="middle1">
+       <div class="row">
+        <form action='/predict' method="post" class="col s12">
+        <div class="input-field col s4" id="gapper">
+            <label for="first_name"><b style="color:#000; font-weight:bolder; text-shadow: 0 0 3px #FFFF; 1px 1px 2px black, 0 0 25px yellow">Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+            <div class="input-field col s4" id="gap">
+    
+              <label for="last_name"><b style=" color:#000; font-weight:bolder; text-shadow: 0 0 3px #FFFF; 1px 1px 2px black, 0 0 25px yellow">Oxygen </b></label>
+                <br>
+              <input id="last_name" name="  Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate">
+    
+            </div>
+
+            <div class="input-field col s4"  id="gap">
+                <label for="_name"><b style="color:#000; font-weight:bolder; text-shadow: 0 0 3px #FFFF; 1px 1px 2px black, 0 0 25px yellow">Humidity</b></label>
+                <br>
+              <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+    
+            </div>
+     <div class="row center"  id="gap2">
+    
+              <button type="submit" class="btn-large waves-effect waves-light orange" id="btnpro">Predict Probability</button>
+          </div>
+          
+            <br>
+        {{pred}}<br>
+          </form>
+          </div>
+       </div>
+       
+       </div>
+       <div class="middle1">
+      </div>
+       <div style="height:200px">
+      </div>
+       
+       <footer class="page-footer orange">
+     
+       
+      
+    <div class="footer-copyright" style="text-align:center">
+      <div class="container">
+      <span style="color:#333">Made by</span> <a class="orange-text text-lighten-3"  style="color:green;">BHASKAR SAI</a>
+      </div>
+    </div>
+  </footer>
+
+       
+       
+       
+       
+      
+       </div></div>
+       
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>
